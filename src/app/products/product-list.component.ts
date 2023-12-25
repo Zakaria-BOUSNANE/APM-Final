@@ -13,6 +13,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   imageMargin = 2;
   showImage = false;
   errorMessage = '';
+  displayedColumns: string[] = ['image', 'product', 'code', 'available', 'price', 'rating'];
   sub!: Subscription;
 
   private _listFilter = '';
