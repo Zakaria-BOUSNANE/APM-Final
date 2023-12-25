@@ -6,6 +6,14 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 import { ProductModule } from './products/product.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+
+
+
 
 @NgModule({
   declarations: [
@@ -13,6 +21,10 @@ import { ProductModule } from './products/product.module';
     WelcomeComponent
   ],
   imports: [
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule,
+    MatTableModule,
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
@@ -20,7 +32,8 @@ import { ProductModule } from './products/product.module';
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),
-    ProductModule
+    ProductModule,
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent]
 })
