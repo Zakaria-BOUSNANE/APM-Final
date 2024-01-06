@@ -19,21 +19,22 @@
     <div class='table-responsive'>
       <table class='table'
              *ngIf='products.length'>
-        <thead>
-          <tr>
-            <th>
-              <button class='btn btn-primary'
-                      (click)='toggleImage()'>
-                {{showImage ? 'Hide' : 'Show'}} Image
-              </button>
-            </th>
-            <th>Product</th>
-            <th>Code</th>
-            <th>Available</th>
-            <th>Price</th>
-            <th>5 Star Rating</th>
-          </tr>
-        </thead>
+        <!-- In your HTML template -->
+<thead>
+  <tr>
+    <th class="blue-text">
+      <button class='btn btn-primary' (click)='toggleImage()'>
+        {{showImage ? 'Hide' : 'Show'}} Image
+      </button>
+    </th>
+    <th class="blue-text">Product</th>
+    <th class="blue-text">Code</th>
+    <th class="blue-text">Available</th>
+    <th class="blue-text">Price</th>
+    <th class="blue-text">5 Star Rating</th>
+  </tr>
+</thead>
+
         <tbody>
           <tr *ngFor='let product of products'>
             <td>
